@@ -49,17 +49,6 @@ class FlickrData: NSObject {
 
                             flickerPhotoObject.photoURL = FlickrData.URLForFlickrPhoto(flickerPhotoObject, size: "m")
 
-//                            print("photo object\(flickerPhotoObject.photoURL)")
-
-
-
-//                            let url = NSURL(string:flickerPhotoObject.photoURL)
-//
-//                            let imageData = NSData(contentsOfURL: url!)
-//
-//                            let image = UIImage(data: imageData!)
-//                            flickerPhotoObject.thumbnail = image
-
                             photoArray.append(flickerPhotoObject)
 
                         }

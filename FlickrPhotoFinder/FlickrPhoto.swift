@@ -19,8 +19,7 @@ class FlickrPhoto: NSObject {
     var title:String = ""
     var photoURL:String = ""
 
-    var thumbnail:UIImage!
-    var largeImage:UIImage!
+    var image:UIImage!
 
     override init() {
         

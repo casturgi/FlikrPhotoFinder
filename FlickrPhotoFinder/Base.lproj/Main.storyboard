@@ -42,6 +42,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="GpE-c9-Ay9" kind="show" identifier="showDetailView" id="FUZ-E5-Wuz"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -83,6 +86,54 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1597" y="257"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="yTg-I8-LLc">
+            <objects>
+                <viewController id="GpE-c9-Ay9" customClass="DetailViewController" customModule="FlickrPhotoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IDo-yW-6st"/>
+                        <viewControllerLayoutGuide type="bottom" id="cS9-Yg-ayr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rDP-f1-Y4O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ws0-4V-MnQ">
+                                <rect key="frame" x="0.0" y="135" width="600" height="465"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0M-Dk-gFi">
+                                <rect key="frame" x="0.0" y="64" width="600" height="73"/>
+                                <color key="backgroundColor" red="0.38431372549999998" green="0.38431372549999998" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="E2R-YV-PyO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cS9-Yg-ayr" firstAttribute="top" secondItem="ws0-4V-MnQ" secondAttribute="bottom" id="0du-p1-Xz8"/>
+                            <constraint firstItem="ws0-4V-MnQ" firstAttribute="leading" secondItem="rDP-f1-Y4O" secondAttribute="leadingMargin" constant="-20" id="2F4-mu-sF4"/>
+                            <constraint firstItem="M0M-Dk-gFi" firstAttribute="top" secondItem="IDo-yW-6st" secondAttribute="bottom" id="Hxr-rU-h7R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M0M-Dk-gFi" secondAttribute="trailing" constant="-20" id="b1q-Z2-eso"/>
+                            <constraint firstItem="M0M-Dk-gFi" firstAttribute="leading" secondItem="rDP-f1-Y4O" secondAttribute="leadingMargin" constant="-20" id="cRu-jY-Xjz"/>
+                            <constraint firstItem="ws0-4V-MnQ" firstAttribute="top" secondItem="M0M-Dk-gFi" secondAttribute="bottom" constant="-2" id="djx-An-CED"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ws0-4V-MnQ" secondAttribute="trailing" constant="-20" id="l7z-dc-48a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hs-qZ-f9a"/>
+                    <connections>
+                        <outlet property="imageView" destination="ws0-4V-MnQ" id="w7z-jC-eHy"/>
+                        <outlet property="titleLabel" destination="M0M-Dk-gFi" id="dAL-jq-KN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5W-Se-uHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="257"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M3O-Ln-cvN">
