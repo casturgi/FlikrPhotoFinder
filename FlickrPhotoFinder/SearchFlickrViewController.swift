@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class SearchFlickrViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
+class SearchFlickrViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -66,19 +66,34 @@ class SearchFlickrViewController: UIViewController, UICollectionViewDataSource, 
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CELL", forIndexPath: indexPath) as UICollectionViewCell
+        let cell:ImageCollectionViewCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CELL", forIndexPath: indexPath) as! ImageCollectionViewCell
 
-        let imageView:UIImageView = UIImageView()
-        imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        imageView.image = self.picturesArray[indexPath.row].image
+//        let imageView:UIImageView = UIImageView()
+//        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+//        imageView.image = self.picturesArray[indexPath.row].image
 
-        cell.backgroundView = imageView
+        cell.image = self.picturesArray[indexPath.row].image
 
-        
+        let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y)/200) * 10
+        cell.setImageOffset(CGPointMake(0, yOffset))
+
         return cell;
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    }
+
+    //scrollview delegate methods
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+
+        for view in collectionView.visibleCells(){
+            let view:ImageCollectionViewCell = view as! ImageCollectionViewCell
+            let yOffset:CGFloat = ((collectionView.contentOffset.y - view.frame.origin.y) / 250) * 15
+            view.setImageOffset(CGPointMake(0, yOffset))
+        }
+
+
     }
 
     //searchBar delegate methods
