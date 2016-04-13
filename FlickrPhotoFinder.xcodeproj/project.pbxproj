@@ -14,7 +14,6 @@
 		4E2783681CBC0B61000364C8 /* FlickrPhotoFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E2783661CBC0B61000364C8 /* FlickrPhotoFinder.xcdatamodeld */; };
 		4E27836A1CBC0B61000364C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2783691CBC0B61000364C8 /* Assets.xcassets */; };
 		4E27836D1CBC0B61000364C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E27836B1CBC0B61000364C8 /* LaunchScreen.storyboard */; };
-		4E2783781CBC0B61000364C8 /* FlickrPhotoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2783771CBC0B61000364C8 /* FlickrPhotoFinderTests.swift */; };
 		4E2783831CBC0B61000364C8 /* FlickrPhotoFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2783821CBC0B61000364C8 /* FlickrPhotoFinderUITests.swift */; };
 		4E5D67271CBD5C8C00F46D42 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D67261CBD5C8C00F46D42 /* SwiftyJSON.framework */; };
 		4E5D67291CBEAABA00F46D42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D67281CBEAABA00F46D42 /* DetailViewController.swift */; };
@@ -52,8 +51,6 @@
 		4E27836C1CBC0B61000364C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E27836E1CBC0B61000364C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2783731CBC0B61000364C8 /* FlickrPhotoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrPhotoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2783771CBC0B61000364C8 /* FlickrPhotoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoFinderTests.swift; sourceTree = "<group>"; };
-		4E2783791CBC0B61000364C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E27837E1CBC0B61000364C8 /* FlickrPhotoFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrPhotoFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2783821CBC0B61000364C8 /* FlickrPhotoFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoFinderUITests.swift; sourceTree = "<group>"; };
 		4E2783841CBC0B61000364C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				4E27835E1CBC0B61000364C8 /* FlickrPhotoFinder */,
-				4E2783761CBC0B61000364C8 /* FlickrPhotoFinderTests */,
 				4E2783811CBC0B61000364C8 /* FlickrPhotoFinderUITests */,
 				4E27835D1CBC0B5F000364C8 /* Products */,
 				3786498F8A0571673706611A /* Pods */,
@@ -150,15 +146,6 @@
 				4E2783661CBC0B61000364C8 /* FlickrPhotoFinder.xcdatamodeld */,
 			);
 			path = FlickrPhotoFinder;
-			sourceTree = "<group>";
-		};
-		4E2783761CBC0B61000364C8 /* FlickrPhotoFinderTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E2783771CBC0B61000364C8 /* FlickrPhotoFinderTests.swift */,
-				4E2783791CBC0B61000364C8 /* Info.plist */,
-			);
-			path = FlickrPhotoFinderTests;
 			sourceTree = "<group>";
 		};
 		4E2783811CBC0B61000364C8 /* FlickrPhotoFinderUITests */ = {
@@ -392,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2783781CBC0B61000364C8 /* FlickrPhotoFinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CorySturgis.FlickrPhotoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -551,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CorySturgis.FlickrPhotoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -562,7 +550,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CorySturgis.FlickrPhotoFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickrPhotoFinder.app/FlickrPhotoFinder";
 			};
 			name = Debug;
 		};

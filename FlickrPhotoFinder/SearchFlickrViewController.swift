@@ -68,10 +68,6 @@ class SearchFlickrViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:ImageCollectionViewCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CELL", forIndexPath: indexPath) as! ImageCollectionViewCell
 
-//        let imageView:UIImageView = UIImageView()
-//        imageView.contentMode = UIViewContentMode.ScaleAspectFill
-//        imageView.image = self.picturesArray[indexPath.row].image
-
         cell.image = self.picturesArray[indexPath.row].image
 
         let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y)/200) * 10

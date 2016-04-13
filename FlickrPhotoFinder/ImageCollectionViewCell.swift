@@ -44,7 +44,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
 
         self.clipsToBounds = true
 
-        imageView = UIImageView(frame: CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 320, 200))
+        imageView = UIImageView(frame: CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 600, 200))
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.clipsToBounds = false
         self.addSubview(imageView)

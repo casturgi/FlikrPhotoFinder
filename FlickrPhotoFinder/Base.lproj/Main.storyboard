@@ -25,7 +25,7 @@
                                     <outlet property="delegate" destination="hJL-ps-pcm" id="QXL-eo-zYl"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-dn-xju">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-dn-xju">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mtj-oL-R9V">
                                     <size key="itemSize" width="599" height="201"/>
@@ -53,11 +53,15 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zXe-DS-977" firstAttribute="top" secondItem="S3q-me-4dx" secondAttribute="bottom" id="FeZ-j9-zPh"/>
+                            <constraint firstItem="zc3-dn-xju" firstAttribute="top" secondItem="zXe-DS-977" secondAttribute="bottom" id="Geh-JT-IgG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zXe-DS-977" secondAttribute="trailing" constant="-20" id="No3-2b-mej"/>
                             <constraint firstItem="zXe-DS-977" firstAttribute="leading" secondItem="rfG-lI-vZu" secondAttribute="leadingMargin" constant="-20" id="dqe-qF-Yxe"/>
+                            <constraint firstItem="52L-yL-NoF" firstAttribute="top" secondItem="zc3-dn-xju" secondAttribute="bottom" id="j36-wb-q53"/>
+                            <constraint firstItem="zc3-dn-xju" firstAttribute="leading" secondItem="zXe-DS-977" secondAttribute="leading" id="ubM-0w-kYe"/>
+                            <constraint firstItem="zc3-dn-xju" firstAttribute="centerX" secondItem="rfG-lI-vZu" secondAttribute="centerX" id="vr7-Y3-4f1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flickr Photo Finder" id="EzB-Cg-AN4"/>
